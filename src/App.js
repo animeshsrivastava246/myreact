@@ -1,10 +1,15 @@
 import './App.css';
-// import About from './components/About';
+import About from './components/About'; 
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import React, { useState } from 'react';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -33,13 +38,21 @@ function App() {
   }
   return (
     <>
-      {/* <Navbar abtName="Devil"/> */}
-      <Navbar title="Text Customizer" abtName="Animesh" mode={mode} toggleMode={toggleMode}/>
-      <Alert alert={alert}/>
-      <div className="container my-3">
-        <TextForm showAlert={showAlert} mode={mode} heading="Write down or paste your text."/>
-      </div>
-      {/* <About mode={mode}/> */}
+      <Router>  
+        {/* <Navbar abtName="Devil"/> */}
+        <Navbar title="Text Customizer" abtName="Animesh" mode={mode} toggleMode={toggleMode}/>
+        <Alert alert={alert}/>
+        <Switch>
+            <Route path="/about">
+              <About mode={mode}/>
+            </Route>
+            <Route path="/">
+              <TextForm showAlert={showAlert} mode={mode} heading="Write down or paste your text."/>
+            </Route>
+          </Switch>
+        <div className="container my-3">
+        </div>
+      </Router>
     </>
   );
 }
