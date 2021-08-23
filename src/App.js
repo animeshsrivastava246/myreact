@@ -43,10 +43,10 @@ function App() {
         <Navbar title="Text Customizer" abtName="Animesh" mode={mode} toggleMode={toggleMode}/>
         <Alert alert={alert}/>
         <Switch>
-            <Route path="/about">
+            <Route exact path="/about">
               <About mode={mode}/>
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <TextForm showAlert={showAlert} mode={mode} heading="Write down or paste your text."/>
             </Route>
           </Switch>
