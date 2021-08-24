@@ -13,7 +13,7 @@ export default function About(props) {
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div className="accordion-body" style={{backgroundColor: props.mode==='light' ? 'white' : 'black'}}>
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            Text Customizer is an app which can be used for daily basis text enhancement by using the tools like copy, capitalise, time to read the text and etc.<br/> Hope my small work contribute in your daily life by doing the small tasks of text customization.
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ export default function About(props) {
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div className="accordion-body" style={{backgroundColor: props.mode==='light' ? 'white' : 'black'}}>
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        Hello guys, I am <strong>ANIMESH SRIVASTAVA</strong>, a coder who has kicked off his journey with full of enthusiasm and energy irrespective of many hurdles and snags. My field of interest includes exploring different domains in technology and interacting with every new update that comes with time. I am open to learning and developing new skills. I firmly believe in saying, "What I do, I must strive to do it the best." I prefer constructive criticism and acknowledge suggestions coming from everyone. I am honest in my work and aspire to achieve perfection in every task given.
                         </div>
                     </div>
                 </div>
