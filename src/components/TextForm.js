@@ -10,7 +10,7 @@ export default function TextForm(props) {
         setText(low);
     }
     const handleSpaceClick = ()=>{
-        let sp = text.split(/[ ]+/);
+        let sp = text.split(/[\s ]+/);
         setText(sp.join(" "));
     }
     const handleFirstCapClick = ()=>{
@@ -20,9 +20,7 @@ export default function TextForm(props) {
         setText(CapText);
     }
     const handleCopyClick = ()=>{
-        var txt = document.getElementById("myBox");
-        txt.select();
-        navigator.clipboard.writeText(txt.value);
+        navigator.clipboard.writeText(text);
         props.showAlert("Copied to Clipboard", "success");
     }
     const handleClearClick = ()=>{
@@ -40,7 +38,7 @@ export default function TextForm(props) {
             <div className="container" style={{color: props.mode==='light' ? 'black' : 'white'}}>
                 <div className="mb-3">
                     <h1>{props.heading}</h1>
-                    <textarea className="form-control mx-3" value={text} style={{backgroundColor: props.mode==='dark' ? 'grey' : 'white'}} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+                    <textarea className="form-control mx-3" value={text} style={{backgroundColor: props.mode==='dark' ? '#969696' : 'white'}} onChange={handleOnChange} id="myBox" rows="8"></textarea>
                 </div>
                 <button type="button" className="btn btn-secondary mx-2" onClick={handleUpClick}>TO UPPERCASE</button>
                 <button type="button" className="btn btn-secondary" onClick={handleDownClick}>to lowercase</button>
@@ -50,8 +48,8 @@ export default function TextForm(props) {
                 <button type="button" className="btn btn-dark" onClick={handleClearClick}>Clear</button>
                 <div className="mb-3 my-4">
                     <h2>About Yout Text</h2>
-                    <p>There are {(text.length)===0 ? 0 : text.trim().split(/[ ]+/).length} words and {text.length} characters and {text.split(" ").length - 1} whitespaces.</p>
-                    <p>It will take <b><i>{0.008 * ((text.length)===0 ? 0 : text.trim().split(/[ ]+/).length)}</i></b> minutes to read</p>
+                    <p>There are {(text.length)===0 ? 0 : text.trim().split(/[\s ]+/).length} words and {text.length} characters and {text.split(" ").length - 1} whitespaces.</p>
+                    <p>It will take <b><i>{0.008 * ((text.length)===0 ? 0 : text.trim().split(/[\s ]+/).length)}</i></b> minutes to read</p>
                 </div>
             </div>
         </>
